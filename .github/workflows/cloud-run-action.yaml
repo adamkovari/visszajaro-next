@@ -19,6 +19,7 @@ jobs:
       - name: Setup GCP Service Account
         uses: google-github-actions/auth@v1
         with:
+          token_format: 'access_token'
           workload_identity_provider: 'projects/1016726224165/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
           service_account: 'admin-802@visszajaro-377613.iam.gserviceaccount.com'
       
@@ -27,9 +28,12 @@ jobs:
           docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/visszajaro:latest .
 
       - name: Deploy
+        id: 'deploy'
         uses: 'google-github-actions/deploy-cloudrun@v1'
         with:
-          region: 'region europe-west3'
-          image: 'gcr.io/${{ secrets.GCP_PROJECT_ID }}/visszajaro:latest'
-          project_id: '${{ secrets.GCP_PROJECT_ID }}'
+          region: europe-west3
+          image: gcr.io/${{ secrets.GCP_PROJECT_ID }}/visszajaro:latest
           service: 'visszajaro'
+
+      - name: Ready to Access
+        run: curl ${{ steps.deploy.outputs.url }}
