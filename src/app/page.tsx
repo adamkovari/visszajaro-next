@@ -28,7 +28,7 @@ export default function Home() {
               <h2 className='text-xl leading-8'>One pager</h2>
           </div>
           <div className='basis-1/2 flex justify-end'>
-            <div className='h-3/5'> 
+            <div className='w-4/6'> 
               <img className='rounded-lg' src="/assets/1.jpeg" alt="" />
             </div>
           </div>
