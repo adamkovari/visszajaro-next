@@ -30,8 +30,7 @@ jobs:
         id: 'deploy'
         uses: 'google-github-actions/deploy-cloudrun@v1'
         with:
-          region: europe-west3
-          image: gcr.io/${{ secrets.GCP_PROJECT_ID }}/visszajaro:latest
+          region: 'europe-west3'
           service: 'visszajaro'
 
       - name: Ready to Access
