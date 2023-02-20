@@ -21,16 +21,19 @@ jobs:
         with:
           workload_identity_provider: 'projects/1016726224165/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
           service_account: 'admin-802@visszajaro-377613.iam.gserviceaccount.com'
+
+      - name: Configure Docker
+        run: |
+          gcloud auth configure-docker
       
       - name: Build
         run: |
           docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/visszajaro:latest .
 
       - name: Deploy
-        run: |
-          gcloud run deploy visszajaro \
-          --region europe-west3 \
-          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/visszajaro:latest \
-          --platform managed \
-          --allow-unauthenticated \
-          --project ${{ secrets.GCP_PROJECT_ID }}
+        uses: 'google-github-actions/deploy-cloudrun@v1'
+        with:
+          region: 'region europe-west3'
+          image: 'gcr.io/${{ secrets.GCP_PROJECT_ID }}/visszajaro:latest'
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service: visszajaro
