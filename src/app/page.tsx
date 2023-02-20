@@ -22,14 +22,14 @@ export default function Home() {
         <div className='absolute z-[2] w-full h-full bg-white/80'>
 
         </div>
-        <div className='z-[3] flex flex-row gap-x-5 items-center w-11/12'>
-          <div className='basis-1/2 flex flex-col'>
+        <div className='z-[3] flex flex-col gap-x-5 items-center w-11/12 relative md:flex-row'>
+          <div className='md:basis-1/2 flex flex-col'>
               <h1 className='text-5xl font-bold mb-5'>Visszajáró</h1>
               <h2 className='text-xl leading-8'>One pager</h2>
           </div>
-          <div className='basis-1/2 flex justify-end'>
-            <div className='w-4/6'> 
-              <img className='rounded-lg' src="/assets/1.jpeg" alt="" />
+          <div className='hidden md:flex md:basis-1/2 justify-center md:justify-end'>
+            <div className='md:w-10/12'> 
+              <img className='mx-auto h-2/3 md:h-full rounded-lg' src="/assets/1.jpeg" alt="" />
             </div>
           </div>
         </div>
@@ -44,8 +44,8 @@ export default function Home() {
       </div>
 
       {/* 3 */}
-      <div className='py-32 w-11/12 flex flex-row gap-x-8 mx-auto items-center'>
-        <div className='basis-1/3'>
+      <div className='py-32 w-11/12 flex flex-col md:flex-row gap-x-8 mx-auto items-center'>
+        <div className='basis-1/3 mb-14 md:mb-0'>
           <h3 className='text-3xl mb-3 leading[45px] font-semibold'>Kik vagyunk mi?</h3>
           <p className='text-xl font-normal mb-3'>Négy fiatalból álló csapat vagyunk, egy fontos közös tulajdonsággal: szeretünk a vendéglátásban a törzshelyeinken időt tölteni.</p>
           <p className='text-xl font-normal'>Szeretnénk a modern környezetünk lehetőségeit kihasználni a törzsvendég élmény javítására.</p>
