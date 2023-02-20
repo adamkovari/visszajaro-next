@@ -21,10 +21,6 @@ jobs:
         with:
           workload_identity_provider: 'projects/1016726224165/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
           service_account: 'admin-802@visszajaro-377613.iam.gserviceaccount.com'
-
-      - name: Configure Docker
-        run: |
-          gcloud auth configure-docker
       
       - name: Build
         run: |
@@ -36,4 +32,4 @@ jobs:
           region: 'region europe-west3'
           image: 'gcr.io/${{ secrets.GCP_PROJECT_ID }}/visszajaro:latest'
           project_id: ${{ secrets.GCP_PROJECT_ID }}
-          service: visszajaro
+          service: 'visszajaro'
