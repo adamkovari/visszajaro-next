@@ -19,8 +19,8 @@ jobs:
       - name: Setup GCP Service Account
         uses: google-github-actions/auth@v1
         with:
-          workload_identity_provider: 'projects/1016726224165/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-          service_account: 'admin-802@visszajaro-377613.iam.gserviceaccount.com'
+          workload_identity_provider: 'projects/1032879314966/locations/global/workloadIdentityPools/github-cd-ci/*'
+          service_account: 'visszajaro-next-bot@visszajaro-377613.iam.gserviceaccount.com'
       
       - name: Build
         run: |
