@@ -27,6 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+visszajaro-377613-7092c71a5673.json
 
 # vercel
 .vercel
