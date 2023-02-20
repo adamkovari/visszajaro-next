@@ -28,8 +28,8 @@ export default function Home() {
               <h2 className='text-xl leading-8'>One pager</h2>
           </div>
           <div className='hidden md:flex md:basis-1/2 justify-center md:justify-end'>
-            <div className='md:w-10/12'> 
-              <img className='mx-auto h-2/3 md:h-full rounded-lg' src="/assets/1.jpeg" alt="" />
+            <div className='md:w-10/12 flex items-center'> 
+              <img className='mx-auto h-2/3 md:h-3/4 rounded-lg' src="/assets/1.jpeg" alt="" />
             </div>
           </div>
         </div>
