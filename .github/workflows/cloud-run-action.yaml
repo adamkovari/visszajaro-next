@@ -19,7 +19,6 @@ jobs:
       - name: Setup GCP Service Account
         uses: google-github-actions/auth@v1
         with:
-          token_format: 'access_token'
           workload_identity_provider: 'projects/1016726224165/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
           service_account: 'admin-802@visszajaro-377613.iam.gserviceaccount.com'
       
