@@ -34,7 +34,11 @@ const Tab = ( props: { headers: Array<string>, features: Array<string>, images: 
                 {
                     props.features.map((e,i) => (
                         <div key={i}>
-                            <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e}  />
+                            {
+                                props.images[i].includes('mp4')
+                                ? <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e} video={props.images[i]} />
+                                : <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e} img={props.images[i]} />
+                            }
                         </div>
                     ))
                 }

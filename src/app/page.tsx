@@ -16,7 +16,7 @@ export default function Home() {
     'Nem kell még egy tablet! A Visszajáró gond nélkül kapcsolódik a vendéglátós szoftverek nagy részéhez, így könnyen a vendéglátó helyek könnyen tudnak csatlakozni hozzánk.'
   ]
 
-  const image1 = [
+  const images1 = [
     '/assets/f1_1.jpg',
     '/assets/f2_1.jpg',
     '/assets/f3.mp4'
@@ -129,7 +129,7 @@ export default function Home() {
         <div className='relative py-32 w-11/12 mx-auto text-center'>
           <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök Vendéglátóhelyeknek</h1>
           
-          <Tab headers={headers1} features={features1} />
+          <Tab headers={headers1} features={features1} images={images1}/>
 
 
         </div>
@@ -140,7 +140,7 @@ export default function Home() {
         <div className='relative py-32 w-11/12 mx-auto text-center'>
           <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök Vendégeknek</h1>
           
-          <Tab headers={headers2} features={features2} />
+          <Tab headers={headers2} features={features2} images={images2}/>
 
 
         </div>
