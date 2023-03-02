@@ -3,6 +3,31 @@ import Image from 'next/image'
 import styles from './page.module.css'
 
 export default function Home() {
+
+  const headers1 = [
+    'Személyre és étteremre szabható törzsvendég-jutalmazó rendszer',
+    'Gyorsabb asztalzárás az érintésmentes fizetéssel',
+    'Fogyasztási adatok a te kezedben'
+  ]
+
+  const features1 = [
+    'Szerezz több visszajáró vendéget! A törzsvendégrendszer alkalmazásával egyszerűen tudod jutalmazni azokat, akik sokszor térnek be hozzád.',
+    'A vendégek a Visszajáróval gyorsabban és egyszerűbben tudnak fizetni, így többen tudnak nálatok időt tölteni és a felszolgálónak is több ideje marad értékesíteni.',
+    'Az alkalmazáson keresztül fizetett tételek adatai alapján könnyen átlátható kimutatásokat kaphatsz vendégeid fogyasztási szokásairól, így tájékozottaban tudsz döntést hozni a forgalom növelése érdekében.'
+  ]
+
+  const headers2 = [
+    'Egyszerű különfizetés',
+    'Törzsvendégprogram',
+    'Fogyasztás valós idejű követése'
+  ]
+
+  const features2 = [
+    'Mondj búcsút a nehézkes és lassú különfizetésnek. Mindegy hányan vagytok, mindenki egyszerűen és gyorsan tudja a telefonján keresztül kifizetni a fogyasztását.',
+    'Sokat jársz egy helyre, de nem érzed magad igazi törzsvendégnek? Az alkalmazáson keresztül a vendéglátóhely pontosan és egyszerűen tudja jutalmazni a visszajáró vendégeket, így mindenki jól jár.',
+    'Nincs több meglepetés! A Visszajáró segítségével élőben pontosan követni tudod a fogyasztásodat.'
+  ]
+
   return (
     <main className="bg-white h-full">
       {/* 1 */}
@@ -51,18 +76,20 @@ export default function Home() {
           <p className='text-xl font-normal'>Szeretnénk a modern környezetünk lehetőségeit kihasználni a törzsvendég élmény javítására.</p>
         </div>
         <div className='basis-2/3'>
-          <video
-            autoPlay
-            loop
-            muted
-            className="w-4/5 h-auto rounded-xl mx-auto"
-          >
-            <source
-              src="/assets/2.mp4"
-              type="video/mp4"
-            />
-            
-          </video>
+          <div className='flex flex-row justify-around mx-auto'>
+              <div className='basis-1/3'>
+                <img className='rounded-full' src="/assets/peti.jpg" alt="" />
+                <p className='text-lg'>Szekeres Péter</p>
+              </div>
+              <div className='basis-1/3'>
+                <img className='rounded-full' src="/assets/eni.jpg" alt="" />
+                <p className='text-lg'>Szabó Enikő</p>
+              </div>
+              <div className='basis-1/3'>
+                <img className='rounded-full' src="/assets/adi.png" alt="" />
+                <p className='text-lg'>Kővári Ádám</p>
+              </div>
+          </div>
         </div>
       </div>
 
@@ -71,8 +98,8 @@ export default function Home() {
         <div className='absolute w-full h-full bg-deep-purple/80'></div>
         <div className='relative py-32 w-11/12 mx-auto text-white text-center'>
           <h1 className='text-5xl leading-10 font-bold mb-12'>Mit nyújt a Visszajáró?</h1>
-          <p className='text-white text-xl leading-7 font-normal text-start mb-5'><span className='bg-yellow'>A vendéglátó hely számára </span> kapcsolódási pontot nyújtunk a törzsvendégeivel. A Visszajáró vendégeket jutalmazni tudja, illetve az alkalmazáson keresztül fizetett fogyasztás által információhoz jut a fogyasztási szokásokról.</p>
-          <p className='text-white text-xl leading-7 font-normal text-start'><span className='bg-yellow'>A vendég számára </span>egyszerűbb fizetési lehetőséget nyújtunk csoportos fizetés esetén. A vendég az asztal fogyasztását bármikor ellenőrizheti. Kedvenc éttermeivel közvetlenül kapcsolatba kerül, és élvezi az étterem visszajáró vendégeinek nyújtott kedvezményeket.</p>
+          <p className='text-white text-xl leading-7 font-normal text-start mb-5'><span className='bg-yellow'>A vendéglátó hely számára </span> kapcsolódási pontot nyújtunk a törzsvendégeivel. A Visszajáró vendégeket jutalmazni tudja, illetve az alkalmazáson keresztül fizetett fogyasztás által információt ad a fogyasztási szokásokról.</p>
+          <p className='text-white text-xl leading-7 font-normal text-start'><span className='bg-yellow'>A vendég számára </span>egyszerűbb fizetési lehetőséget nyújtunk csoportos fizetés esetén. A vendég az asztal fogyasztását bármikor ellenőrizheti. Kedvenc éttermeivel közvetlenül kapcsolatba kerül, és élvezi az étterem visszajáró vendégeinek nyújtott kedvezményeit.</p>
         </div>
       </div>
       
@@ -88,21 +115,32 @@ export default function Home() {
       {/* 6 */}
       <div className="relative">
         <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök</h1>
+          <h1 className='text-5xl leading-10 font-bold mb-12'>Vendéglátóhelyeknek</h1>
           
-          <Tab />
+          <Tab headers={headers1} features={features1} />
 
 
         </div>
       </div>
 
       {/* 7 */}
+      <div className="relative">
+        <div className='relative py-32 w-11/12 mx-auto text-center'>
+          <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök</h1>
+          
+          <Tab headers={headers2} features={features2} />
+
+
+        </div>
+      </div>
+
+      {/* 8 */}
       <div className="relative bg-[url('/assets/bg4.png')] bg-cover bg-center">
         <div className='absolute w-full h-full bg-deep-purple/80'></div>
         <div className='relative py-32 w-11/12 mx-auto text-white text-start'>
           <h1 className='text-5xl leading-10 font-bold mb-12'>Írj nekünk.</h1>
           <p className='text-white text-xl leading-7 font-normal text-start mb-5'>Ha felkeltettük az érdeklődésedet, lépj velünk kapcsolatba!</p>
-          <p className='mb-5'><a className='text-white text-xl leading-7 font-normal text-start' href="mailto:info@visszajaro.hu">info@visszajaro.hu</a></p>
+          <p className='mb-5'><a className='text-white text-xl leading-7 font-normal text-start' href="mailto:info@visszajaro.com">info@visszajaro.com</a></p>
           <p className='text-white text-xl leading-7 font-normal text-start mb-5'>+36 70 320 3786</p>
         </div>
       </div>
