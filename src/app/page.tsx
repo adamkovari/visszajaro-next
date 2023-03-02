@@ -7,13 +7,19 @@ export default function Home() {
   const headers1 = [
     'Személyre és étteremre szabható törzsvendég-jutalmazó rendszer',
     'Gyorsabb asztalzárás az érintésmentes fizetéssel',
-    'Fogyasztási adatok a te kezedben'
+    'Zökkenőmentes integráció'
   ]
 
   const features1 = [
     'Szerezz több visszajáró vendéget! A törzsvendégrendszer alkalmazásával egyszerűen tudod jutalmazni azokat, akik sokszor térnek be hozzád.',
     'A vendégek a Visszajáróval gyorsabban és egyszerűbben tudnak fizetni, így többen tudnak nálatok időt tölteni és a felszolgálónak is több ideje marad értékesíteni.',
-    'Az alkalmazáson keresztül fizetett tételek adatai alapján könnyen átlátható kimutatásokat kaphatsz vendégeid fogyasztási szokásairól, így tájékozottaban tudsz döntést hozni a forgalom növelése érdekében.'
+    'Nem kell még egy tablet! A Visszajáró gond nélkül kapcsolódik a vendéglátós szoftverek nagy részéhez, így könnyen a vendéglátó helyek könnyen tudnak csatlakozni hozzánk.'
+  ]
+
+  const image1 = [
+    '/assets/f1_1.jpg',
+    '/assets/f2_1.jpg',
+    '/assets/f3.mp4'
   ]
 
   const headers2 = [
@@ -26,6 +32,12 @@ export default function Home() {
     'Mondj búcsút a nehézkes és lassú különfizetésnek. Mindegy hányan vagytok, mindenki egyszerűen és gyorsan tudja a telefonján keresztül kifizetni a fogyasztását.',
     'Sokat jársz egy helyre, de nem érzed magad igazi törzsvendégnek? Az alkalmazáson keresztül a vendéglátóhely pontosan és egyszerűen tudja jutalmazni a visszajáró vendégeket, így mindenki jól jár.',
     'Nincs több meglepetés! A Visszajáró segítségével élőben pontosan követni tudod a fogyasztásodat.'
+  ]
+
+  const images2 = [
+    '/assets/f1.jpeg',
+    '/assets/f2.mp4',
+    '/assets/f3.jpg'
   ]
 
   return (
@@ -76,18 +88,18 @@ export default function Home() {
           <p className='text-xl font-normal'>Szeretnénk a modern környezetünk lehetőségeit kihasználni a törzsvendég élmény javítására.</p>
         </div>
         <div className='basis-2/3'>
-          <div className='flex flex-row justify-around mx-auto'>
+          <div className='flex flex-row justify-around mx-auto text-center items-center'>
               <div className='basis-1/3'>
                 <img className='rounded-full' src="/assets/peti.jpg" alt="" />
-                <p className='text-lg'>Szekeres Péter</p>
+                <p className='text-lg font-semibold'>Szekeres Péter</p>
               </div>
               <div className='basis-1/3'>
                 <img className='rounded-full' src="/assets/eni.jpg" alt="" />
-                <p className='text-lg'>Szabó Enikő</p>
+                <p className='text-lg font-semibold'>Szabó Enikő</p>
               </div>
               <div className='basis-1/3'>
                 <img className='rounded-full' src="/assets/adi.png" alt="" />
-                <p className='text-lg'>Kővári Ádám</p>
+                <p className='text-lg font-semibold'>Kővári Ádám</p>
               </div>
           </div>
         </div>
@@ -115,7 +127,7 @@ export default function Home() {
       {/* 6 */}
       <div className="relative">
         <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h1 className='text-5xl leading-10 font-bold mb-12'>Vendéglátóhelyeknek</h1>
+          <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök Vendéglátóhelyeknek</h1>
           
           <Tab headers={headers1} features={features1} />
 
@@ -126,7 +138,7 @@ export default function Home() {
       {/* 7 */}
       <div className="relative">
         <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök</h1>
+          <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök Vendégeknek</h1>
           
           <Tab headers={headers2} features={features2} />
 

@@ -3,7 +3,7 @@
 import React from "react";
 import SubComponent from "./subComponent";
 
-const Tab = ( props: { headers: Array<string>, features: Array<string>}) => {
+const Tab = ( props: { headers: Array<string>, features: Array<string>, images: Array<string> }) => {
 
     const [act, setAct] = React.useState(1);
     
@@ -34,7 +34,7 @@ const Tab = ( props: { headers: Array<string>, features: Array<string>}) => {
                 {
                     props.features.map((e,i) => (
                         <div key={i}>
-                            <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e} />
+                            <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e}  />
                         </div>
                     ))
                 }
