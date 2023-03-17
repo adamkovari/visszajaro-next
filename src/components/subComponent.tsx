@@ -1,13 +1,13 @@
-const SubComponent = (props: { sel: boolean, head: string, text: string, img?: string, video?: string}) => {
+const SubComponent = (props: { sel: boolean, head: string, text: string, img?: string, video?: string, dir: boolean}) => {
 
     return (
         
         <>
-            <div className={ !props.sel ? "hidden" : "mb-10 md:mb-0 md:basis-1/2"}>
+            <div className={ props.sel && !props.dir ? "mb-10 md:mb-0 md:basis-1/2" : "hidden"}>
                 <h1 className="text-3xl leading-10 mb-3 font-semibold text-start">{props.head}</h1>
                 <p className="text-xl text-start">{props.text}</p>
             </div>
-            <div className={ !props.sel ? "hidden" : "md:basis-1/2"}>
+            <div className={ props.sel ? "md:basis-1/2" : "hidden"}>
                 <img className={ props.img ? "rounded-xl" : "hidden"} src={props.img} alt="" />
                 <video
                             autoPlay
@@ -19,8 +19,11 @@ const SubComponent = (props: { sel: boolean, head: string, text: string, img?: s
                             src={props.video}
                             type="video/mp4"
                             />
-                            
                     </video>
+            </div>
+            <div className={ props.sel && props.dir ? "mb-10 md:mb-0 md:basis-1/2" : "hidden"}>
+                <h1 className="text-3xl leading-10 mb-3 font-semibold text-start">{props.head}</h1>
+                <p className="text-xl text-start">{props.text}</p>
             </div>
         </>
     )

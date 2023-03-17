@@ -3,7 +3,7 @@
 import React from "react";
 import SubComponent from "./subComponent";
 
-const Tab = ( props: { headers: Array<string>, features: Array<string>, images: Array<string> }) => {
+const Tab = ( props: { headers: Array<string>, features: Array<string>, images: Array<string>, dir: boolean }) => {
 
     const [act, setAct] = React.useState(1);
     
@@ -30,19 +30,17 @@ const Tab = ( props: { headers: Array<string>, features: Array<string>, images: 
                 <div className={ act !== 3 ? cls1 : cls2} onClick={handleClick(3)}># 3</div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-x-6 items-center justify-between">
-                {
-                    props.features.map((e,i) => (
-                        <div key={i}>
-                            {
-                                props.images[i].includes('mp4')
-                                ? <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e} video={props.images[i]} />
-                                : <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e} img={props.images[i]} />
-                            }
-                        </div>
-                    ))
-                }
-            </div>
+            {
+                props.features.map((e,i) => (
+                    <div key={i} className={'flex flex-col md:flex-row gap-x-6 items-center justify-center'}>
+                        {
+                            props.images[i].includes('mp4')
+                            ? <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e} video={props.images[i]} dir={props.dir} />
+                            : <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e} img={props.images[i]} dir={props.dir} />
+                        }
+                    </div>
+                ))
+            }
         </div>
     )
 }

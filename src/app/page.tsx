@@ -48,7 +48,7 @@ export default function Home() {
           autoPlay
           loop
           muted
-          className="absolute z-[1] w-auto min-w-full max-w-none"
+          className="absolute z-[1] w-screen max-w-none"
         >
           <source
             src="/assets/bg1.mp4"
@@ -56,7 +56,7 @@ export default function Home() {
           />
           
         </video>
-        <div className='absolute z-[2] w-full h-full bg-white/80'>
+        <div className='absolute z-[2] w-full h-full bg-white/60'>
 
         </div>
         <div className='z-[3] flex flex-col gap-x-5 items-center w-11/12 relative md:flex-row'>
@@ -76,7 +76,7 @@ export default function Home() {
       <div className="relative bg-[url('/assets/bg2.png')] bg-cover">
         <div className='absolute w-full h-full bg-purple-bg/80 z-[1]'></div>
         <div className='relative z-[2] w-11/12 mx-auto'>
-            <h3 className='py-32 text-white text-3xl leading-10 font-semibold text-center'>A kedvenc vendéglátóhelyed vár vissza az <span className='bg-yellow'>igazi törzsvendégeknek</span> kijáró kedvességel, egyszerűbb fizetési lehetőséggel és még sok minden mással. Ez a Visszajáró.</h3>
+            <h3 className='py-32 text-white text-3xl leading-10 font-semibold text-center'>A kedvenc vendéglátóhelyed vár vissza az <span className='w-auto h-auto relative z-[30]'><span className='absolute w-1/2 h-full bg-yellow z-[10]  transition-[2000ms]'></span>igazi törzsvendégeknek</span> kijáró kedvességel, egyszerűbb fizetési lehetőséggel és még sok minden mással. Ez a Visszajáró.</h3>
         </div>
       </div>
 
@@ -110,8 +110,8 @@ export default function Home() {
         <div className='absolute w-full h-full bg-deep-purple/80'></div>
         <div className='relative py-32 w-11/12 mx-auto text-white text-center'>
           <h1 className='text-5xl leading-10 font-bold mb-12'>Mit nyújt a Visszajáró?</h1>
-          <p className='text-white text-xl leading-7 font-normal text-start mb-5'><span className='bg-yellow'>A vendéglátó hely számára </span> kapcsolódási pontot nyújtunk a törzsvendégeivel. A Visszajáró vendégeket jutalmazni tudja, illetve az alkalmazáson keresztül fizetett fogyasztás által információt ad a fogyasztási szokásokról.</p>
-          <p className='text-white text-xl leading-7 font-normal text-start'><span className='bg-yellow'>A vendég számára </span>egyszerűbb fizetési lehetőséget nyújtunk csoportos fizetés esetén. A vendég az asztal fogyasztását bármikor ellenőrizheti. Kedvenc éttermeivel közvetlenül kapcsolatba kerül, és élvezi az étterem visszajáró vendégeinek nyújtott kedvezményeit.</p>
+          <p className='text-white text-xl leading-7 font-normal text-start mb-5'><span className='bg-yellow transition-all duration-[2000ms]'>A vendéglátó hely számára </span> kapcsolódási pontot nyújtunk a törzsvendégeivel. A Visszajáró vendégeket jutalmazni tudja, illetve az alkalmazáson keresztül fizetett fogyasztás által információt ad a fogyasztási szokásokról.</p>
+          <p className='text-white text-xl leading-7 font-normal text-start'><span className='bg-yellow transition-all duration-[2000ms]'>A vendég számára </span>egyszerűbb fizetési lehetőséget nyújtunk csoportos fizetés esetén. A vendég az asztal fogyasztását bármikor ellenőrizheti. Kedvenc éttermeivel közvetlenül kapcsolatba kerül, és élvezi az étterem visszajáró vendégeinek nyújtott kedvezményeit.</p>
         </div>
       </div>
       
@@ -129,7 +129,7 @@ export default function Home() {
         <div className='relative py-32 w-11/12 mx-auto text-center'>
           <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök Vendéglátóhelyeknek</h1>
           
-          <Tab headers={headers1} features={features1} images={images1}/>
+          <Tab headers={headers1} features={features1} images={images1} dir={false}/>
 
 
         </div>
@@ -140,7 +140,7 @@ export default function Home() {
         <div className='relative py-32 w-11/12 mx-auto text-center'>
           <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök Vendégeknek</h1>
           
-          <Tab headers={headers2} features={features2} images={images2}/>
+          <Tab headers={headers2} features={features2} images={images2} dir={true}/>
 
 
         </div>
