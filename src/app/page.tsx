@@ -1,8 +1,17 @@
+'use client'
+
 import Tab from '@/components/component'
 import Image from 'next/image'
 import styles from './page.module.css'
+import { useScrollPosition } from '@/hooks/UseScrollPositionHook'
 
 export default function Home() {
+
+  function classNames(...classes: string[]) {
+    return classes.filter(Boolean).join(' ')
+  }
+
+  const scrollPosition = useScrollPosition();
 
   const headers1 = [
     'Személyre és étteremre szabható törzsvendég-jutalmazó rendszer',
@@ -40,6 +49,11 @@ export default function Home() {
     '/assets/f3.jpg'
   ]
 
+  const storeScroll = () => {
+    document.documentElement.dataset.scroll = window.scrollY.toString();
+
+  }
+
   return (
     <main className="bg-white h-full">
       {/* 1 */}
@@ -76,7 +90,7 @@ export default function Home() {
       <div className="relative bg-[url('/assets/bg2.png')] bg-cover">
         <div className='absolute w-full h-full bg-purple-bg/80 z-[1]'></div>
         <div className='relative z-[2] w-11/12 mx-auto'>
-            <h3 className='py-32 text-white text-3xl leading-10 font-semibold text-center'>A kedvenc vendéglátóhelyed vár vissza az <span className='w-auto h-auto relative z-[30]'><span className='absolute w-1/2 h-full bg-yellow z-[10]  transition-[2000ms]'></span>igazi törzsvendégeknek</span> kijáró kedvességel, egyszerűbb fizetési lehetőséggel és még sok minden mással. Ez a Visszajáró.</h3>
+            <h3 className='py-32 text-white text-3xl leading-10 font-semibold text-center'>A kedvenc vendéglátóhelyed vár vissza az <span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 250 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>igazi törzsvendégeknek</span> kijáró kedvességel, egyszerűbb fizetési lehetőséggel és még sok minden mással. Ez a Visszajáró.</h3>
         </div>
       </div>
 
@@ -110,8 +124,8 @@ export default function Home() {
         <div className='absolute w-full h-full bg-deep-purple/80'></div>
         <div className='relative py-32 w-11/12 mx-auto text-white text-center'>
           <h1 className='text-5xl leading-10 font-bold mb-12'>Mit nyújt a Visszajáró?</h1>
-          <p className='text-white text-xl leading-7 font-normal text-start mb-5'><span className='bg-yellow transition-all duration-[2000ms]'>A vendéglátó hely számára </span> kapcsolódási pontot nyújtunk a törzsvendégeivel. A Visszajáró vendégeket jutalmazni tudja, illetve az alkalmazáson keresztül fizetett fogyasztás által információt ad a fogyasztási szokásokról.</p>
-          <p className='text-white text-xl leading-7 font-normal text-start'><span className='bg-yellow transition-all duration-[2000ms]'>A vendég számára </span>egyszerűbb fizetési lehetőséget nyújtunk csoportos fizetés esetén. A vendég az asztal fogyasztását bármikor ellenőrizheti. Kedvenc éttermeivel közvetlenül kapcsolatba kerül, és élvezi az étterem visszajáró vendégeinek nyújtott kedvezményeit.</p>
+          <p className='text-white text-xl leading-7 font-normal text-start mb-5'><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 1300 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>A vendéglátó hely számára </span> kapcsolódási pontot nyújtunk a törzsvendégeivel. A Visszajáró vendégeket jutalmazni tudja, illetve az alkalmazáson keresztül fizetett fogyasztás által információt ad a fogyasztási szokásokról.</p>
+          <p className='text-white text-xl leading-7 font-normal text-start'><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 1300 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>A vendég számára </span>egyszerűbb fizetési lehetőséget nyújtunk csoportos fizetés esetén. A vendég az asztal fogyasztását bármikor ellenőrizheti. Kedvenc éttermeivel közvetlenül kapcsolatba kerül, és élvezi az étterem visszajáró vendégeinek nyújtott kedvezményeit.</p>
         </div>
       </div>
       
