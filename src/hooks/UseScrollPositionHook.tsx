@@ -7,7 +7,7 @@ export const useScrollPosition = () => {
     const updatePosition = () => {
       if(window.pageYOffset > scrollPosition)
       {
-        console.log(window.pageYOffset)
+        //console.log(window.pageYOffset)
         setScrollPosition(window.pageYOffset)
       }
     }

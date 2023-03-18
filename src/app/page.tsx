@@ -62,7 +62,7 @@ export default function Home() {
           autoPlay
           loop
           muted
-          className="absolute z-[1] w-screen max-w-none"
+          className="absolute z-[1] h-screen 2xl:w-screen 2xl:h-auto max-w-none"
         >
           <source
             src="/assets/bg1.mp4"
@@ -90,7 +90,7 @@ export default function Home() {
       <div className="relative bg-[url('/assets/bg2.png')] bg-cover">
         <div className='absolute w-full h-full bg-purple-bg/80 z-[1]'></div>
         <div className='relative z-[2] w-11/12 mx-auto'>
-            <h3 className='py-32 text-white text-3xl leading-10 font-semibold text-center'>A kedvenc vendéglátóhelyed vár vissza az <span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 250 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>igazi törzsvendégeknek</span> kijáró kedvességel, egyszerűbb fizetési lehetőséggel és még sok minden mással. Ez a Visszajáró.</h3>
+            <h3 className='py-32 text-white text-3xl leading-10 font-semibold text-center'>A kedvenc vendéglátóhelyed vár vissza az <br className='md:hidden' /><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 250 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>igazi törzsvendégeknek</span> kijáró kedvességel, egyszerűbb fizetési lehetőséggel és még sok minden mással. Ez a Visszajáró.</h3>
         </div>
       </div>
 
@@ -102,7 +102,7 @@ export default function Home() {
           <p className='text-xl font-normal'>Szeretnénk a modern környezetünk lehetőségeit kihasználni a törzsvendég élmény javítására.</p>
         </div>
         <div className='basis-2/3'>
-          <div className='flex flex-row justify-around mx-auto text-center items-center'>
+          <div className='flex flex-row justify-around mx-auto text-center items-center gap-x-4'>
               <div className='basis-1/3'>
                 <img className='rounded-full w-auto' src="/assets/peti.jpg" alt="" />
                 <p className='text-lg font-semibold'>Szekeres Péter</p>
@@ -136,22 +136,26 @@ export default function Home() {
           <p className='text-xl leading-7 font-normal text-start mb-5'>Az alkalmazásunk a vendéglátó hely által használt éttermi szoftverhez kapcsolódva működik, így nem kell megváltoztatni a vendéglátó hely belső működését. Az asztalokon kihelyezett QR-kódot beolvasva a vendég élőben követheti a fogyasztását, és választott tételeket (vagy akár az egészt asztalt is) könnyen érítésmentesen kifizetheti.</p>
           <p className='text-xl leading-7 font-normal text-start'>A vendéglátó hely szármára nyújtott felületünkön a vendéglátó egyszerűen tud kedvezményeket nyújtani a beálított paramétereknek (pl. havi 40 000 Ft fogyasztást elérő) vendégeknek, akik erről az alkalmazáson belül értesítést kapnak.</p>
         </div>
+      </div>
 
-        <div className='relative py-26 w-11/12 mx-auto text-center'>
+      {/* 6 */}
+      <div className='relative bg-white-bg'>
+        <div className='relative py-32 w-11/12 mx-auto text-center'>
           <h1 className='text-5xl leading-10 font-bold mb-12'>Egyszerűsített folyamat</h1>
-          <div className='flex flex-row flex-wrap justify-center gap-4'>
+          <div className='flex flex-row flex-wrap justify-center overflow-hidden gap-4'>
               <img className={classNames(scrollPosition > 2400 ? 'translate-x-0' : 'translate-x-[-20rem]', 'basis-2/5 duration-[1000ms]',)} src="/assets/onepager/1.svg" alt="" />
-              <img className={classNames(scrollPosition > 2400 ? 'translate-x-0' : 'translate-x-[20rem]', 'basis-2/5 duration-[1000ms]',)} src="/assets/onepager/3.svg" alt="" />
-              <img className={classNames(scrollPosition > 2700 ? 'translate-x-0' : 'translate-x-[-20rem]', 'basis-2/5 duration-[1000ms]',)} src="/assets/onepager/2.svg" alt="" />
-              <img className={classNames(scrollPosition > 2700 ? 'translate-x-0' : 'translate-x-[20rem]', 'basis-2/5 duration-[1000ms]',)} src="/assets/onepager/4.svg" alt="" />
+              <img className={classNames(scrollPosition > 2400 ? 'translate-x-0' : 'translate-x-[20rem]', 'basis-2/5 hidden md:block duration-[1000ms]',)} src="/assets/onepager/3.svg" alt="" />
+              <img className={classNames(scrollPosition > 2600 ? 'translate-x-0' : 'translate-x-[-20rem]', 'basis-2/5 duration-[1000ms]',)} src="/assets/onepager/2.svg" alt="" />
+              <img className={classNames(scrollPosition > 2400 ? 'translate-x-0' : 'translate-x-[20rem]', 'basis-2/5 md:hidden duration-[1000ms]',)} src="/assets/onepager/3.svg" alt="" />
+              <img className={classNames(scrollPosition > 2600 ? 'translate-x-0' : 'translate-x-[20rem]', 'basis-2/5 duration-[1000ms]',)} src="/assets/onepager/4.svg" alt="" />
           </div>
         </div>
       </div>
 
-      {/* 6 */}
+      {/* 7 */}
       <div className="relative">
         <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök Vendéglátóhelyeknek</h1>
+          <h1 className='text-5xl leading-10 font-bold mb-12 break-words'>Előnyök Vendéglátóhelyeknek</h1>
           
           <Tab headers={headers1} features={features1} images={images1} dir={false}/>
 
@@ -159,7 +163,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 7 */}
+      {/* 8 */}
       <div className="relative">
         <div className='relative py-32 w-11/12 mx-auto text-center'>
           <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök Vendégeknek</h1>
@@ -170,7 +174,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 8 */}
+      {/* 9 */}
       <div className="relative bg-[url('/assets/bg4.png')] bg-cover bg-center">
         <div className='absolute w-full h-full bg-deep-purple/80'></div>
         <div className='relative py-32 w-11/12 mx-auto text-white text-start'>
