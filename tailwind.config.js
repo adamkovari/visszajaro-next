@@ -13,6 +13,7 @@ module.exports = {
         'deep-purple': '#411A4B',
         'light-purple': '#C0ACC6',
         'purple-bg': '#1D0E22',
+        'blue': '#355F8F',
       },
       fontFamily: {
         sans: ['var(--font-poppins)', ...fontFamily.sans],
