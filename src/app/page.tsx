@@ -4,6 +4,7 @@ import Tab from '@/components/component'
 import Image from 'next/image'
 import styles from './page.module.css'
 import { useScrollPosition } from '@/hooks/UseScrollPositionHook'
+import WorkflowCard from '@/components/workflowCard'
 
 export default function Home() {
 
@@ -128,26 +129,19 @@ export default function Home() {
           <p className='text-white text-xl leading-7 font-normal text-start'><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 1300 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>A vendég számára </span>egyszerűbb fizetési lehetőséget nyújtunk csoportos fizetés esetén. A vendég az asztal fogyasztását bármikor ellenőrizheti. Kedvenc éttermeivel közvetlenül kapcsolatba kerül, és élvezi az étterem visszajáró vendégeinek nyújtott kedvezményeit.</p>
         </div>
       </div>
-      
-      {/* 5 */}
-      <div className="relative bg-white-bg">
-        <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h1 className='text-5xl leading-10 font-bold mb-12'>Hogyan működik?</h1>
-          <p className='text-xl leading-7 font-normal text-start mb-5'>Az alkalmazásunk a vendéglátó hely által használt éttermi szoftverhez kapcsolódva működik, így nem kell megváltoztatni a vendéglátó hely belső működését. Az asztalokon kihelyezett QR-kódot beolvasva a vendég élőben követheti a fogyasztását, és választott tételeket (vagy akár az egészt asztalt is) könnyen érítésmentesen kifizetheti.</p>
-          <p className='text-xl leading-7 font-normal text-start'>A vendéglátó hely szármára nyújtott felületünkön a vendéglátó egyszerűen tud kedvezményeket nyújtani a beálított paramétereknek (pl. havi 40 000 Ft fogyasztást elérő) vendégeknek, akik erről az alkalmazáson belül értesítést kapnak.</p>
-        </div>
-      </div>
 
       {/* 6 */}
       <div className='relative bg-white-bg'>
         <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h1 className='text-5xl leading-10 font-bold mb-12'>Egyszerűsített folyamat</h1>
+          <h1 className='text-5xl leading-10 font-bold mb-12'>Hogyan működik?</h1>
           <div className='flex flex-row flex-wrap justify-center overflow-hidden gap-4'>
-              <img className={classNames(scrollPosition > 2400 ? 'translate-x-0' : 'translate-x-[-20rem]', 'basis-2/5 duration-[1000ms]',)} src="/assets/onepager/1.svg" alt="" />
-              <img className={classNames(scrollPosition > 2400 ? 'translate-x-0' : 'translate-x-[20rem]', 'basis-2/5 hidden md:block duration-[1000ms]',)} src="/assets/onepager/3.svg" alt="" />
-              <img className={classNames(scrollPosition > 2600 ? 'translate-x-0' : 'translate-x-[-20rem]', 'basis-2/5 duration-[1000ms]',)} src="/assets/onepager/2.svg" alt="" />
-              <img className={classNames(scrollPosition > 2400 ? 'translate-x-0' : 'translate-x-[20rem]', 'basis-2/5 md:hidden duration-[1000ms]',)} src="/assets/onepager/3.svg" alt="" />
-              <img className={classNames(scrollPosition > 2600 ? 'translate-x-0' : 'translate-x-[20rem]', 'basis-2/5 duration-[1000ms]',)} src="/assets/onepager/4.svg" alt="" />
+              <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0' : 'translate-x-[-20rem]', 'basis-2/5 duration-[1000ms]',)} dir={false} head={'QR kód beolvasása'} text={'Érkezéskor a vendég beszkenneli az asztalánál található QR kódot, így látja az appban az asztalát, menüt, stb. A vendég megjelenik a POS rendszerben az asztalánál.'} icon={'/assets/onepager/1_1.svg'} idx={1} />
+
+              <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0' : 'translate-x-[20rem]', 'basis-2/5 duration-[1000ms]',)} dir={true} head={'Saját tételek kiválasztása'} text={'A vendég kiválaszthatja az asztalról a saját rendeléseit az appban. A POS rendszerben megjelennek a kiválasztott tételek az adott székhez rendelve.'} icon={'/assets/onepager/3_1.svg'} idx={3} />
+
+              <WorkflowCard className={classNames(scrollPosition > 2100 ? 'translate-x-0' : 'translate-x-[-20rem]', 'basis-2/5 duration-[1000ms]',)} dir={false} head={'Rendelés leadása a pincérnél'} text={'A pincér felveszi a rendelést a saját rendszerében, amely megjelenik az appban is.'} icon={'/assets/onepager/2_1.svg'} idx={2} />
+
+              <WorkflowCard className={classNames(scrollPosition > 2100 ? 'translate-x-0' : 'translate-x-[20rem]', 'basis-2/5 duration-[1000ms]',)} dir={true} head={'Fizetés'} text={'A vendég fizet az appban, vagy a pincérnél. Fizetheti a teljes asztalt, vagy csak a saját tételeit. A POS rendszer jelzi, ha az egész asztalt kifizették.'} icon={'/assets/onepager/4_1.svg'} idx={4} />
           </div>
         </div>
       </div>
