@@ -15,39 +15,42 @@ export default function Home() {
   const scrollPosition = useScrollPosition();
 
   const headers1 = [
-    'Személyre és étteremre szabható törzsvendég-jutalmazó rendszer',
-    'Gyorsabb asztalzárás az érintésmentes fizetéssel',
-    'Zökkenőmentes integráció'
+    ['Személyre és étteremre szabható törzsvendég-jutalmazó rendszer', '#törzsvendégprogram'],
+    ['Gyorsabb asztalzárás az érintésmentes fizetéssel', '#gyorsabbfizetés'],
+    ['Zökkenőmentes integráció', '#integrálható']
   ]
 
   const features1 = [
     'Szerezz több visszajáró vendéget! A törzsvendégrendszer alkalmazásával egyszerűen tudod jutalmazni azokat, akik sokszor térnek be hozzád.',
     'A vendégek a Visszajáróval gyorsabban és egyszerűbben tudnak fizetni, így többen tudnak nálatok időt tölteni és a felszolgálónak is több ideje marad értékesíteni.',
-    'Nem kell még egy tablet! A Visszajáró gond nélkül kapcsolódik a vendéglátós szoftverek nagy részéhez, így könnyen a vendéglátó helyek könnyen tudnak csatlakozni hozzánk.'
+    'Nem kell még egy tablet! A Visszajáró gond nélkül kapcsolódik a vendéglátós szoftverek nagy részéhez, így a vendéglátó helyek könnyen tudnak csatlakozni hozzánk.'
   ]
 
   const images1 = [
-    '/assets/f1_1.jpg',
-    '/assets/f2_1.jpg',
-    '/assets/f3.mp4'
+    ['/assets/szemelyre-szabhato-torzsvendeg-rendszer.webp', 'Szerezz több törzsvendéget egyedi jutalmazórendszerrel!'],
+    ['/assets/erintesmentes-fizetes.webp','Gyors, egyszerű és akár bontott fizetés érintésmentesen!'],
+    ['/assets/zokkenomentes-integracio.mp4', 'Integrálható az éttermi szoftverrel, hogy ne kelljen plusz rendszert bevezess!']
   ]
 
   const headers2 = [
-    'Egyszerű különfizetés',
-    'Törzsvendégprogram',
-    'Fogyasztás valós idejű követése'
+    ['Egyszerű különfizetés', '#bontottfizetés'],
+    ['Törzsvendégprogram', '#jutalmak'],
+    ['Fogyasztás valós idejű követése', '#fogyasztáskövetés'],
+    ['Akár a böngésződből is', '#appnélkülis']
   ]
 
   const features2 = [
     'Mondj búcsút a nehézkes és lassú különfizetésnek. Mindegy hányan vagytok, mindenki egyszerűen és gyorsan tudja a telefonján keresztül kifizetni a fogyasztását.',
     'Sokat jársz egy helyre, de nem érzed magad igazi törzsvendégnek? Az alkalmazáson keresztül a vendéglátóhely pontosan és egyszerűen tudja jutalmazni a visszajáró vendégeket, így mindenki jól jár.',
-    'Nincs több meglepetés! A Visszajáró segítségével élőben pontosan követni tudod a fogyasztásodat.'
+    'Nincs több meglepetés! A Visszajáró segítségével élőben pontosan követni tudod a fogyasztásodat.',
+    'Nincs még egy app! A Visszajáró akkor is működik, ha nincs letöltve az alkalmazásunk, így mindenki számára könnyen elérhetőek a Visszajáró által nyújtott előnyök.'
   ]
 
   const images2 = [
-    '/assets/f1.jpeg',
-    '/assets/f2.mp4',
-    '/assets/f3.jpg'
+    ['/assets/bontott-fizetes.webp', 'Fizessetek külön egyszerűen!'],
+    ['/assets/torzsvendegprogram.mp4', 'Élvezd a személyre szabott kedvezményeidet a törzshelyeiden!'],
+    ['/assets/fogyasztas-kovetes.webp', 'Kövesd élőben a fogyasztásodat!'],
+    ['/assets/applikacio-nelkul.webp', 'Nem kell applikációt letölteni, használhatod a böngésződből is!']
   ]
 
   const storeScroll = () => {
@@ -81,39 +84,39 @@ export default function Home() {
           </div>
           <div className='hidden md:flex md:basis-1/2 justify-center md:justify-end'>
             <div className='md:w-10/12 flex items-center'> 
-              <img className='mx-auto h-2/3 md:h-3/4 rounded-lg' src="/assets/1.jpeg" alt="" />
+              <img className='mx-auto h-2/3 md:h-3/4 rounded-lg' src="/assets/vendeglatas.webp" alt="" />
             </div>
           </div>
         </div>
       </div>
 
       {/* 2 */}
-      <div className="relative bg-[url('/assets/bg2.png')] bg-cover">
+      <div className="relative bg-[url('/assets/bg2.webp')] bg-cover">
         <div className='absolute w-full h-full bg-purple-bg/80 z-[1]'></div>
         <div className='relative z-[2] w-11/12 mx-auto'>
-            <h3 className='py-32 text-white text-3xl leading-10 font-semibold text-center'>A kedvenc vendéglátóhelyed vár vissza az <br className='lg:hidden' /><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 250 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>igazi törzsvendégeknek</span> kijáró kedvességel, egyszerűbb fizetési lehetőséggel és még sok minden mással. Ez a Visszajáró.</h3>
+            <h2 className='py-32 text-white text-3xl leading-10 font-semibold text-center'>A kedvenc vendéglátóhelyed vár vissza az <br className='lg:hidden' /><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 250 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>igazi törzsvendégeknek</span> kijáró kedvességel, egyszerűbb fizetési lehetőséggel és még sok minden mással. Ez a Visszajáró.</h2>
         </div>
       </div>
 
       {/* 3 */}
       <div className='py-32 w-11/12 flex flex-col md:flex-row gap-x-8 mx-auto items-center'>
         <div className='basis-1/3 mb-14 md:mb-0'>
-          <h3 className='text-3xl mb-3 leading[45px] font-semibold'>Kik vagyunk mi?</h3>
+          <h2 className='text-3xl mb-3 leading[45px] font-semibold'>Kik vagyunk mi?</h2>
           <p className='text-xl font-normal mb-3'>Fiatalokból álló csapat vagyunk, egy fontos közös tulajdonsággal: szeretünk a vendéglátásban a törzshelyeinken időt tölteni.</p>
           <p className='text-xl font-normal'>Szeretnénk a modern környezetünk lehetőségeit kihasználni a törzsvendég élmény javítására.</p>
         </div>
         <div className='basis-2/3'>
           <div className='flex flex-row justify-around mx-auto text-center items-center gap-x-4'>
               <div className='basis-1/3'>
-                <img className='rounded-full w-auto' src="/assets/peti.jpg" alt="" />
+                <img className='rounded-full w-auto' src="/assets/torzsvendeg-1.webp" alt="" />
                 <p className='text-lg font-semibold'>Szekeres Péter</p>
               </div>
               <div className='basis-1/3'>
-                <img className='rounded-full w-auto' src="/assets/eni.jpg" alt="" />
+                <img className='rounded-full w-auto' src="/assets/torzsvendeg-2.webp" alt="" />
                 <p className='text-lg font-semibold'>Szabó Enikő</p>
               </div>
               <div className='basis-1/3'>
-                <img className='rounded-full w-auto' src="/assets/adi.jpg" alt="" />
+                <img className='rounded-full w-auto' src="/assets/torzsvendeg-3.webp" alt="" />
                 <p className='text-lg font-semibold'>Kővári Ádám</p>
               </div>
           </div>
@@ -121,11 +124,11 @@ export default function Home() {
       </div>
 
       {/* 4 */}
-      <div className="relative bg-[url('/assets/bg3.png')] bg-cover">
+      <div className="relative bg-[url('/assets/bg3.webp')] bg-cover">
         <div className='absolute w-full h-full bg-deep-purple/80'></div>
         <div className='relative py-32 w-11/12 mx-auto text-white text-center'>
-          <h1 className='text-5xl leading-10 font-bold mb-12'>Mit nyújt a Visszajáró?</h1>
-          <p className='text-white text-xl leading-7 font-normal text-start mb-5'><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 1300 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>A vendéglátó hely számára </span> kapcsolódási pontot nyújtunk a törzsvendégeivel. A Visszajáró vendégeket jutalmazni tudja, illetve az alkalmazáson keresztül fizetett fogyasztás által információt ad a fogyasztási szokásokról.</p>
+          <h2 className='text-5xl leading-10 font-bold mb-12'>Mit nyújt a Visszajáró?</h2>
+          <p className='text-white text-xl leading-7 font-normal text-start mb-5'><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 1300 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>A vendéglátó hely számára </span> kapcsolódási pontot nyújtunk a törzsvendégeivel. A Visszajáró segítségével a vendéglátó hely a törzsvendégeket jutalmazni tudja, illetve az alkalmazáson keresztül fizetett fogyasztás által információkat kap a fogyasztási szokásokról.</p>
           <p className='text-white text-xl leading-7 font-normal text-start'><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 1300 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>A vendég számára </span>egyszerűbb fizetési lehetőséget nyújtunk csoportos fizetés esetén. A vendég az asztal fogyasztását bármikor ellenőrizheti. Kedvenc éttermeivel közvetlenül kapcsolatba kerül, és élvezi az étterem visszajáró vendégeinek nyújtott kedvezményeit.</p>
         </div>
       </div>
@@ -133,7 +136,7 @@ export default function Home() {
       {/* 6 */}
       <div className='relative bg-white-bg'>
         <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h1 className='text-5xl leading-10 font-bold mb-12'>Hogyan működik?</h1>
+          <h2 className='text-5xl leading-10 font-bold mb-12'>Hogyan működik?</h2>
           <div className='flex flex-row flex-wrap justify-center overflow-hidden gap-4'>
               <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0 opacity-100' : 'translate-x-[-20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={false} head={'QR kód beolvasása'} text={'Érkezéskor a vendég beszkenneli az asztalánál található QR kódot, így látja az appban az asztalát, menüt, stb. A vendég megjelenik a POS rendszerben az asztalánál.'} icon={'/assets/onepager/2.svg'} idx={1} />
 
@@ -151,7 +154,7 @@ export default function Home() {
       {/* 7 */}
       <div className="relative">
         <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h1 className='text-5xl leading-10 font-bold mb-12 break-words'>Előnyök Vendéglátóhelyeknek</h1>
+          <h2 className='text-5xl leading-10 font-bold mb-12 break-words'>Előnyök Vendéglátóhelyeknek</h2>
           
           <Tab headers={headers1} features={features1} images={images1} dir={false}/>
 
@@ -162,7 +165,7 @@ export default function Home() {
       {/* 8 */}
       <div className="relative">
         <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h1 className='text-5xl leading-10 font-bold mb-12'>Előnyök Vendégeknek</h1>
+          <h2 className='text-5xl leading-10 font-bold mb-12'>Előnyök Vendégeknek</h2>
           
           <Tab headers={headers2} features={features2} images={images2} dir={true}/>
 
@@ -171,13 +174,13 @@ export default function Home() {
       </div>
 
       {/* 9 */}
-      <div className="relative bg-[url('/assets/bg4.png')] bg-cover bg-center">
+      <div className="relative bg-[url('/assets/bg4.webp')] bg-cover bg-center">
         <div className='absolute w-full h-full bg-deep-purple/80'></div>
         <div className='relative py-32 w-11/12 mx-auto text-white text-start'>
-          <h1 className='text-5xl leading-10 font-bold mb-12'>Írj nekünk.</h1>
+          <h2 className='text-5xl leading-10 font-bold mb-12'>Írj nekünk.</h2>
           <p className='text-white text-xl leading-7 font-normal text-start mb-5'>Ha felkeltettük az érdeklődésedet, lépj velünk kapcsolatba!</p>
           <p className='mb-5'><a className='text-white text-xl leading-7 font-normal text-start' href="mailto:info@visszajaro.com">info@visszajaro.com</a></p>
-          <p className='text-white text-xl leading-7 font-normal text-start mb-5'>+36 70 320 3786</p>
+          <p className='text-white text-xl leading-7 font-normal text-start mb-5'><a href="tel:+36 70 320 3786">+36 70 320 3786</a></p>
         </div>
       </div>
     </main>

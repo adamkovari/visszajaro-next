@@ -3,7 +3,7 @@ import './globals.css'
 import { Titillium_Web } from 'next/font/google'
 const poppins = Titillium_Web({ subsets: ['latin'], weight: ['300', '400','600', '700'], variable: '--font-poppins' })
 
-export default function RootLayout({
+function RootLayout({
   children,
 }: {
   children: React.ReactNode
@@ -11,7 +11,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} font-sans`}>
       <head />
-      <body>{children}</body>
+      <body>
+          {children}
+      </body>
     </html>
   )
 }
+
+export default RootLayout;

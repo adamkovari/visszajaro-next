@@ -3,7 +3,7 @@
 import React from "react";
 import SubComponent from "./subComponent";
 
-const Tab = ( props: { headers: Array<string>, features: Array<string>, images: Array<string>, dir: boolean }) => {
+const Tab = ( props: { headers: Array<Array<string>>, features: Array<Array<string>>, images: Array<Array<string>>, dir: boolean }) => {
 
     const [act, setAct] = React.useState(1);
     
@@ -25,18 +25,20 @@ const Tab = ( props: { headers: Array<string>, features: Array<string>, images: 
 
         <div className="w-11/12 mx-auto">
             <div id='btns' className='flex flex-row flex-wrap justify-around md:flex-nowrap gap-x-4 md:gap-x-6 mb-6'>
-                <div className={ act !== 1 ? cls1 : cls2} onClick={handleClick(1)}># 1</div>
-                <div className={ act !== 2 ? cls1 : cls2} onClick={handleClick(2)}># 2</div>
-                <div className={ act !== 3 ? cls1 : cls2} onClick={handleClick(3)}># 3</div>
+                {
+                 props.headers.map((e,i) => (
+                     <div className={ act !== i+1 ? cls1 : cls2} onClick={handleClick(i+1)} key={i}>{e[1]}</div>
+                     ))
+                }
             </div>
 
             {
                 props.features.map((e,i) => (
                     <div key={i} className={'flex flex-col md:flex-row gap-x-6 items-center justify-center'}>
                         {
-                            props.images[i].includes('mp4')
-                            ? <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e} video={props.images[i]} dir={props.dir} />
-                            : <SubComponent sel={ act === (i+1)} head={props.headers[i]} text={e} img={props.images[i]} dir={props.dir} />
+                            props.images[i][0].includes('mp4')
+                            ? <SubComponent sel={ act === (i+1)} head={props.headers[i][0]} text={e} video={props.images[i]} dir={props.dir} />
+                            : <SubComponent sel={ act === (i+1)} head={props.headers[i][0]} text={e} img={props.images[i]} dir={props.dir} />
                         }
                     </div>
                 ))
