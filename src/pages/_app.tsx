@@ -1,5 +1,6 @@
 import './globals.css';
 import { Titillium_Web } from 'next/font/google'
+import type { AppProps } from 'next/app'
 
 const poppins = Titillium_Web({ subsets: ['latin'], weight: ['300', '400','600', '700'], variable: '--font-poppins' })
 
