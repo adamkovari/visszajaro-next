@@ -3,7 +3,7 @@
 import React from "react";
 import SubComponent from "./subComponent";
 
-const Tab = ( props: { headers: Array<Array<string>>, features: Array<Array<string>>, images: Array<Array<string>>, dir: boolean }) => {
+const Tab = ( props: { headers: Array<Array<string>>, features: Array<string>, images: Array<Array<string>>, dir: boolean }) => {
 
     const [act, setAct] = React.useState(1);
     
