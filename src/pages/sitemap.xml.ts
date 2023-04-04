@@ -53,7 +53,7 @@ function SiteMap() {
     // getServerSideProps will do the heavy lifting
 }
 
-export async function getServerSideProps({ res }) {
+export async function getServerSideProps({ res: any }) {
     // We generate the XML sitemap with the posts data
     const sitemap = generateSiteMap();
 
