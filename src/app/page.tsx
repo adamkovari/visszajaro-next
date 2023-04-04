@@ -136,8 +136,8 @@ export default function Home() {
       {/* 6 */}
       <div className='relative bg-white-bg'>
         <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h2 className='text-5xl leading-10 font-bold mb-12'>Hogyan működik?</h2>
-          <div className='flex flex-row flex-wrap justify-center overflow-hidden gap-4'>
+          <h2 className='text-5xl leading-10 font-bold'>Hogyan működik?</h2>
+          <div className='flex pt-12 flex-row flex-wrap justify-center overflow-hidden gap-4'>
               <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0 opacity-100' : 'translate-x-[-20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={false} head={'QR kód beolvasása'} text={'Érkezéskor a vendég beszkenneli az asztalánál található QR kódot, így látja az appban az asztalát, menüt, stb. A vendég megjelenik a POS rendszerben az asztalánál.'} icon={'/assets/onepager/2.svg'} idx={1} />
 
               <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0 opacity-100' : 'translate-x-[20rem] opacity-0', 'hidden sm:flex basis-2/5 duration-[1000ms]',)} dir={true} head={'Saját tételek kiválasztása'} text={'A vendég kiválaszthatja az asztalról a saját rendeléseit az appban. A POS rendszerben megjelennek a kiválasztott tételek az adott székhez rendelve.'} icon={'/assets/onepager/3.svg'} idx={3} />
@@ -154,7 +154,7 @@ export default function Home() {
       {/* 7 */}
       <div className="relative">
         <div className='relative py-32 w-11/12 mx-auto text-center'>
-          <h2 className='text-5xl leading-10 font-bold mb-12 break-words'>Előnyök Vendéglátóhelyeknek</h2>
+          <h2 className='text-5xl leading-10 font-bold mb-12 break-words'>Előnyök Vendéglátó<span className='md:hidden'>-</span>helyeknek</h2>
           
           <Tab headers={headers1} features={features1} images={images1} dir={false}/>
 

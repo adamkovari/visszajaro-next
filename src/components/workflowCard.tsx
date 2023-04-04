@@ -2,7 +2,7 @@ const WorkflowCard = (props: {className: string, dir: boolean, head: string, tex
 
     return(
         <div className={"relative rounded-[4rem] flex flex-wrap lg:flex-nowrap md:flex-row justify-center bg-[#AD8BB6] py-6 md:py-6 px-10 md:px-10 gap-x-4 items-center " + props.className }>
-            <div className={!props.dir ? 'absolute w-16 h-8 top-0 md:left-[-2rem] left-0 rounded-[4rem] bg-[#411A4B]' : 'absolute w-16 h-8 top-0 right-0 md:right-[-2rem] rounded-[4rem] bg-[#411A4B]'}>
+            <div className={!props.dir ? 'absolute w-16 h-8 top-[-1rem] md:top-0 md:left-[-2rem] left-0 rounded-[4rem] bg-[#411A4B]' : 'absolute w-16 h-8 top-[-1rem] md:top-0 right-0 md:right-[-2rem] rounded-[4rem] bg-[#411A4B]'}>
                 <p className={!props.dir ? "flex items-center ml-3 text-white font-bold justify-start" : "flex items-center mr-3 text-white font-bold justify-end"}>
                     {props.idx + '.'}
                 </p>
