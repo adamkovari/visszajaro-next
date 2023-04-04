@@ -1,9 +1,8 @@
-const EXTERNAL_DATA_URL = 'https://visszajaro.com';
-
 function generateSiteMap(posts) {
     return `<?xml version="1.0" encoding="UTF-8"?>
-   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <!--We manually set the two URLs we know already-->
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    >
      <url>
        <loc>https://visszajaro.com</loc>
         <image:image>
@@ -55,12 +54,8 @@ function SiteMap() {
 }
 
 export async function getServerSideProps({ res }) {
-    // We make an API call to gather the URLs for our site
-    const request = await fetch(EXTERNAL_DATA_URL);
-    const posts = await request.json();
-
     // We generate the XML sitemap with the posts data
-    const sitemap = generateSiteMap(posts);
+    const sitemap = generateSiteMap();
 
     res.setHeader('Content-Type', 'text/xml');
     // we send the XML to the browser
