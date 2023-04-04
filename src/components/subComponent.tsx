@@ -20,9 +20,10 @@ const SubComponent = (props: { sel: boolean, head: string, text: string, img?: A
                      loop
                      muted
                      className={ props.img ? "hidden" : "h-auto rounded-xl mx-auto"}
+                     title={props.video[1]}
                      >
                      <source
-                         src={props.video[0]} alt={props.video[1]}
+                         src={props.video[0]}
                          type="video/mp4"
                      />
                     </video>
