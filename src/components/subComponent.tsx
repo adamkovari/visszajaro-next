@@ -13,7 +13,7 @@ const SubComponent = (props: { sel: boolean, head: string, text: string, img?: A
                 {
                     props.img
                     ? <Image className={ props.img ? "rounded-xl w-full h-full" : "hidden"} src={props.img[0]} width={1600}
-                        height={900} alt={props.img[1]} />
+                        height={900} priority={true} alt={props.img[1]} />
                     : ''
                 }
                 {
