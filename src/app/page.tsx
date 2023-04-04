@@ -83,8 +83,9 @@ export default function Home() {
               <h2 className='text-xl leading-8'>One pager</h2>
           </div>
           <div className='hidden md:flex md:basis-1/2 justify-center md:justify-end'>
-            <div className='md:w-10/12 flex items-center'> 
-              <img className='mx-auto h-2/3 md:h-3/4 rounded-lg' src="/assets/vendeglatas.webp" alt="" />
+            <div className='md:w-10/12 flex items-center relative'>
+              <Image className='mx-auto h-full w-full rounded-lg object-cover' src="/assets/vendeglatas.webp" width={2000}
+                height={1600} alt="Vendéglátás" />
             </div>
           </div>
         </div>
@@ -107,16 +108,19 @@ export default function Home() {
         </div>
         <div className='basis-2/3'>
           <div className='flex flex-row justify-around mx-auto text-center items-center gap-x-4'>
-              <div className='basis-1/3'>
-                <img className='rounded-full w-auto' src="/assets/torzsvendeg-1.webp" alt="" />
+              <div className='basis-1/3 relative'>
+                <Image className='rounded-full w-full h-full' src="/assets/torzsvendeg-1.webp" width={500}
+                  height={500} alt="Szekeres Péter" />
                 <p className='text-lg font-semibold'>Szekeres Péter</p>
               </div>
-              <div className='basis-1/3'>
-                <img className='rounded-full w-auto' src="/assets/torzsvendeg-2.webp" alt="" />
+            <div className='basis-1/3 relative'>
+                <Image className='rounded-full w-full h-full' src="/assets/torzsvendeg-2.webp" width={500}
+                  height={500} alt="Szabó Enikő" />
                 <p className='text-lg font-semibold'>Szabó Enikő</p>
               </div>
-              <div className='basis-1/3'>
-                <img className='rounded-full w-auto' src="/assets/torzsvendeg-3.webp" alt="" />
+            <div className='basis-1/3 relative'>
+                <Image className='rounded-full w-full h-full' src="/assets/torzsvendeg-3.webp" width={500}
+                  height={500} alt="Kővári Ádám" />
                 <p className='text-lg font-semibold'>Kővári Ádám</p>
               </div>
           </div>

@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const SubComponent = (props: { sel: boolean, head: string, text: string, img?: Array<string>, video?: Array<string>, dir: boolean}) => {
 
     return (
@@ -7,10 +9,11 @@ const SubComponent = (props: { sel: boolean, head: string, text: string, img?: A
                 <h1 className="text-3xl leading-10 mb-3 font-semibold text-start">{props.head}</h1>
                 <p className="text-xl text-start">{props.text}</p>
             </div>
-        <div className={ props.sel ? "mb-10 md:mb-0 md:basis-1/2" : "hidden"}>
+        <div className={ props.sel ? "relative mb-10 md:mb-0 md:basis-1/2" : "hidden"}>
                 {
                     props.img
-                    ? <img className={ props.img ? "rounded-xl" : "hidden"} src={props.img[0]} alt={props.img[1]} />
+                    ? <Image className={ props.img ? "rounded-xl w-full h-full" : "hidden"} src={props.img[0]} width={1600}
+                        height={900} alt={props.img[1]} />
                     : ''
                 }
                 {
