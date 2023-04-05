@@ -84,7 +84,7 @@ export default function Home() {
           </div>
           <div className='hidden md:flex md:basis-1/2 justify-center md:justify-end'>
             <div className='md:w-10/12 flex items-center relative'>
-              <Image className='mx-auto h-full w-full rounded-lg' src="/assets/vendeglatas.webp" width={2000}
+              <Image className='mx-auto h-full w-full xl:w-5/6 rounded-lg' src="/assets/vendeglatas.webp" width={2000}
                 height={1600} priority={true} alt="Vendéglátás" />
             </div>
           </div>
