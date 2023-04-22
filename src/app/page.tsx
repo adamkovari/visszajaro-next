@@ -92,7 +92,7 @@ export default function Home() {
       </div>
 
       {/* 2 */}
-      <div className="relative bg-[url('/assets/bg2.webp')] bg-cover">
+      <div className="relative bg-[url('/assets/etterem-este.webp')] bg-cover bg-center">
         <div className='absolute w-full h-full bg-blue/80 z-[1]'></div>
         <div className='relative z-[2] w-11/12 mx-auto'>
           <h2 className='py-32 text-white text-3xl leading-10 font-semibold text-center'>A kedvenc vendéglátóhelyeid igazi, <br className='lg:hidden' /><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 250 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>törzsvendégeknek</span> kijáró kedvességgel, jutalmakkal, egyszerűbb fizetési lehetőségekkel és még sok minden mással várnak vissza. Ez a Visszajáró.</h2>
@@ -128,7 +128,7 @@ export default function Home() {
       </div>
 
       {/* 4 */}
-      <div className="relative bg-[url('/assets/bg3.webp')] bg-cover">
+      <div className="relative bg-[url('/assets/etterem-torzsvendeg.webp')] bg-cover bg-center">
         <div className='absolute w-full h-full bg-deep-blue/80'></div>
         <div className='relative py-32 w-11/12 mx-auto text-white text-center'>
           <h2 className='text-5xl leading-10 font-bold mb-12'>Mit nyújt a Visszajáró?</h2>
