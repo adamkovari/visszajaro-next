@@ -11,7 +11,6 @@ export const useScrollPosition = () => {
         setScrollPosition(window.pageYOffset)
       }
     }
-
     window.addEventListener('scroll', updatePosition)
 
     updatePosition()

@@ -84,7 +84,7 @@ export default function Home() {
           </div>
           <div className='hidden md:flex md:basis-1/2 justify-center md:justify-end'>
             <div className='md:w-10/12 flex items-center relative'>
-              <Image className='mx-auto h-full w-full xl:w-5/6 rounded-lg' src="/assets/vendeglatas.webp" width={2000}
+              <Image className='hidden mx-auto h-full w-full xl:w-5/6 rounded-lg' src="/assets/vendeglatas.webp" width={2000}
                 height={1600} priority={true} alt="Vendéglátás" />
             </div>
           </div>
@@ -141,14 +141,12 @@ export default function Home() {
       <div className='relative bg-white-bg'>
         <div className='relative py-32 w-11/12 mx-auto text-center'>
           <h2 className='text-5xl leading-10 font-bold'>Hogyan működik?</h2>
-          <div className='flex pt-12 flex-row flex-wrap justify-center overflow-hidden gap-4'>
+          <div className='flex pt-12 flex-row flex-wrap justify-center overflow-hidden gap-8'>
               <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0 opacity-100' : 'translate-x-[-20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={false} head={'QR kód beolvasása'} text={'Érkezéskor a vendég beszkenneli az asztalánál található QR kódot, így látja az appban az asztalát, menüt, stb. A vendég megjelenik a POS rendszerben az asztalánál.'} icon={'/assets/onepager/2.svg'} idx={1} />
 
-              <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0 opacity-100' : 'translate-x-[20rem] opacity-0', 'hidden sm:flex basis-2/5 duration-[1000ms]',)} dir={true} head={'Saját tételek kiválasztása'} text={'A vendég kiválaszthatja az asztalról a saját rendeléseit az appban. A POS rendszerben megjelennek a kiválasztott tételek az adott székhez rendelve.'} icon={'/assets/onepager/3.svg'} idx={3} />
+              <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0 opacity-100' : 'translate-x-[20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={false} head={'Rendelés leadása a pincérnél'} text={'A pincér felveszi a rendelést a saját rendszerében, amely megjelenik az appban is.'} icon={'/assets/onepager/1.svg'} idx={2} />
 
-              <WorkflowCard className={classNames(scrollPosition > 2100 ? 'translate-x-0 opacity-100' : 'translate-x-[-20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={false} head={'Rendelés leadása a pincérnél'} text={'A pincér felveszi a rendelést a saját rendszerében, amely megjelenik az appban is.'} icon={'/assets/onepager/1.svg'} idx={2} />
-
-              <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0 opacity-100' : 'translate-x-[20rem] opacity-0', 'basis-full sm:hidden duration-[1000ms]',)} dir={true} head={'Saját tételek kiválasztása'} text={'A vendég kiválaszthatja az asztalról a saját rendeléseit az appban. A POS rendszerben megjelennek a kiválasztott tételek az adott székhez rendelve.'} icon={'/assets/onepager/3.svg'} idx={3} />
+              <WorkflowCard className={classNames(scrollPosition > 2100 ? 'translate-x-0 opacity-100' : 'translate-x-[-20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={true} head={'Saját tételek kiválasztása'} text={'A vendég kiválaszthatja az asztalról a saját rendeléseit az appban. A POS rendszerben megjelennek a kiválasztott tételek az adott székhez rendelve.'} icon={'/assets/onepager/3.svg'} idx={3} />
 
               <WorkflowCard className={classNames(scrollPosition > 2100 ? 'translate-x-0 opacity-100' : 'translate-x-[20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={true} head={'Fizetés'} text={'A vendég fizet az appban, vagy a pincérnél. Fizetheti a teljes asztalt, vagy csak a saját tételeit. A POS rendszer jelzi, ha az egész asztalt kifizették.'} icon={'/assets/onepager/4.svg'} idx={4} />
           </div>
