@@ -89,13 +89,19 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+          <a className={'z-[3] absolute bottom-6 right-6'} href={'/#contact'}>
+              <div className={'py-4 px-8 bg-blue text-white rounded-full text-xl'}>
+                  Írj nekünk!
+              </div>
+          </a>
       </div>
 
       {/* 2 */}
       <div className="relative bg-[url('/assets/etterem-este.webp')] bg-cover bg-center">
         <div className='absolute w-full h-full bg-blue/80 z-[1]'></div>
         <div className='relative z-[2] w-11/12 mx-auto'>
-          <h2 className='py-32 text-white text-3xl leading-10 font-semibold text-center'>A kedvenc vendéglátóhelyeid igazi, <br className='lg:hidden' /><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 250 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>törzsvendégeknek</span> kijáró kedvességgel, jutalmakkal, egyszerűbb fizetési lehetőségekkel és még sok minden mással várnak vissza. Ez a Visszajáró.</h2>
+          <h2 className='py-32 text-white text-3xl leading-10 font-semibold text-start'>A kedvenc vendéglátóhelyeid igazi, <br className='lg:hidden' /><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 250 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>törzsvendégeknek</span> kijáró kedvességgel, jutalmakkal, egyszerűbb fizetési lehetőségekkel és még sok minden mással várnak vissza. <br/> Ez a Visszajáró.</h2>
         </div>
       </div>
 
@@ -129,7 +135,7 @@ export default function Home() {
 
       {/* 4 */}
       <div className="relative bg-[url('/assets/etterem-torzsvendeg.webp')] bg-cover bg-center">
-        <div className='absolute w-full h-full bg-deep-blue/80'></div>
+        <div className='absolute w-full h-full bg-blue/80'></div>
         <div className='relative py-32 w-11/12 mx-auto text-white text-center'>
           <h2 className='text-5xl leading-10 font-bold mb-12'>Mit nyújt a Visszajáró?</h2>
           <p className='text-white text-xl leading-7 font-normal text-start mb-5'><span className='w-auto h-auto relative z-[1]'><span className={classNames(scrollPosition > 1300 ? 'w-full' : 'w-0', 'absolute h-full bg-yellow z-[-1] duration-[1000ms]',)}></span>A vendéglátóhelyek számára</span> kapcsolatteremtési lehetőséget a törzsvendégeivel. A Visszajáróval a vendéglátóhely jutalmazhatja, motiválhatja törzsvendégeit, valamint az alkalmazással mérheti, elemezheti a fogyasztási szokásaikat, hogy értékes, adatalapú döntéseket hozhasson ezek alapján.</p>
@@ -141,14 +147,14 @@ export default function Home() {
       <div className='relative bg-white-bg'>
         <div className='relative py-32 w-11/12 mx-auto text-center'>
           <h2 className='text-5xl leading-10 font-bold'>Hogyan működik?</h2>
-          <div className='flex pt-12 flex-row flex-wrap justify-center overflow-hidden gap-8'>
-              <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0 opacity-100' : 'translate-x-[-20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={false} head={'QR kód beolvasása'} text={'Érkezéskor a vendég beszkenneli az asztalánál található QR kódot, így látja az appban az asztalát, menüt, stb. A vendég megjelenik a POS rendszerben az asztalánál.'} icon={'/assets/onepager/2.svg'} idx={1} />
+          <div className='w-5/6 flex pt-12 flex-row flex-wrap justify-center overflow-hidden gap-16 mx-auto'>
+              <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0 opacity-100' : 'translate-x-[-20rem] opacity-0', 'basis-full sm:basis-1/5 duration-[1000ms]',)} dir={false} head={'QR kód beolvasása'} text={'Érkezéskor a vendég beszkenneli az asztalánál található QR kódot, így látja az appban az asztalát, menüt, stb. A vendég megjelenik a POS rendszerben az asztalánál.'} icon={'/assets/workflow/qr-kod-beolvasas.webp'} idx={1} alt={'Asztalra kihelyezett QR kód beolvasása'} />
 
-              <WorkflowCard className={classNames(scrollPosition > 1900 ? 'translate-x-0 opacity-100' : 'translate-x-[20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={false} head={'Rendelés leadása a pincérnél'} text={'A pincér felveszi a rendelést a saját rendszerében, amely megjelenik az appban is.'} icon={'/assets/onepager/1.svg'} idx={2} />
+              <WorkflowCard className={classNames(scrollPosition > 2100 ? 'translate-x-0 opacity-100' : 'translate-x-[20rem] opacity-0', 'basis-full sm:basis-1/5 duration-[1000ms]',)} dir={false} head={'Rendelés leadása a pincérnél'} text={'A pincér felveszi a rendelést a saját rendszerében, amely megjelenik az appban is.'} icon={'/assets/workflow/rendeles-pincernel.webp'} idx={2} alt={'Rendelés leadása a pincérnél'} />
 
-              <WorkflowCard className={classNames(scrollPosition > 2100 ? 'translate-x-0 opacity-100' : 'translate-x-[-20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={true} head={'Saját tételek kiválasztása'} text={'A vendég kiválaszthatja az asztalról a saját rendeléseit az appban. A POS rendszerben megjelennek a kiválasztott tételek az adott székhez rendelve.'} icon={'/assets/onepager/3.svg'} idx={3} />
+              <WorkflowCard className={classNames(scrollPosition > 2300 ? 'translate-x-0 opacity-100' : 'translate-x-[-20rem] opacity-0', 'basis-full sm:basis-1/5 duration-[1000ms]',)} dir={true} head={'Saját tételek kiválasztása'} text={'A vendég kiválaszthatja az asztalról a saját rendeléseit az appban. A POS rendszerben megjelennek a kiválasztott tételek az adott székhez rendelve.'} icon={'/assets/workflow/sajat-tetelek-kivalasztasa.webp'} idx={3} alt={'Saját tételek kivaálsztása a Visszajáróban'} />
 
-              <WorkflowCard className={classNames(scrollPosition > 2100 ? 'translate-x-0 opacity-100' : 'translate-x-[20rem] opacity-0', 'basis-full sm:basis-2/5 duration-[1000ms]',)} dir={true} head={'Fizetés'} text={'A vendég fizet az appban, vagy a pincérnél. Fizetheti a teljes asztalt, vagy csak a saját tételeit. A POS rendszer jelzi, ha az egész asztalt kifizették.'} icon={'/assets/onepager/4.svg'} idx={4} />
+              <WorkflowCard className={classNames(scrollPosition > 2450 ? 'translate-x-0 opacity-100' : 'translate-x-[20rem] opacity-0', 'basis-full sm:basis-1/5 duration-[1000ms]',)} dir={true} head={'Fizetés'} text={'A vendég fizet az appban, vagy a pincérnél. Fizetheti a teljes asztalt, vagy csak a saját tételeit. A POS rendszer jelzi, ha az egész asztalt kifizették.'} icon={'/assets/workflow/fizetes.webp'} idx={4} alt={'Fizetés a Visszajáróval'} />
           </div>
         </div>
       </div>
@@ -176,8 +182,8 @@ export default function Home() {
       </div>
 
       {/* 9 */}
-      <div className="relative bg-[url('/assets/bg4.webp')] bg-cover bg-center">
-        <div className='absolute w-full h-full bg-deep-blue/80'></div>
+      <div className="relative bg-[url('/assets/bg4.webp')] bg-cover bg-center" id={'contact'}>
+        <div className='absolute w-full h-full bg-blue/80'></div>
         <div className='relative py-32 w-11/12 mx-auto text-white text-start'>
           <h2 className='text-5xl leading-10 font-bold mb-12'>Írj nekünk!</h2>
           <p className='text-white text-xl leading-7 font-normal text-start mb-5'>Élvezd Te is a Visszajáró nyújtotta előnyöket, keress minket elérhetőségeink egyikén!</p>

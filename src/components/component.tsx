@@ -7,8 +7,8 @@ const Tab = ( props: { headers: Array<Array<string>>, features: Array<string>, i
 
     const [act, setAct] = React.useState(1);
     
-    const cls1 = 'mb-3 md:mb-0 basis-1/4 text-light-blue bg-white-bg px-4 py-2 rounded-full text-lg cursor-pointer hover:text-white-bg hover:bg-deep-blue';
-    const cls2 = 'mb-3 md:mb-0 basis-1/4 text-white-bg bg-deep-blue px-4 py-2 rounded-full text-lg cursor-pointer'
+    const cls1 = 'mb-3 md:mb-0 basis-1/4 text-light-blue bg-white-bg px-4 py-2 rounded-full text-lg cursor-pointer hover:text-white-bg hover:bg-blue';
+    const cls2 = 'mb-3 md:mb-0 basis-1/4 text-white-bg bg-blue px-4 py-2 rounded-full text-lg cursor-pointer'
 
     const handleClick = (nb: number) =>{
         return (event: React.MouseEvent) => {
